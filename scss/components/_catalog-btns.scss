@@ -1,0 +1,94 @@
+.catalog {
+   overflow: hidden;
+   &__categorys {
+      padding: 20px 20px 20px 0;
+      display: flex;
+      gap: 30px;
+      max-width: 100%;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+         height: 7px;
+      }
+      &::-webkit-scrollbar-thumb {
+         background-color: $pink;
+         width: 50px;
+         border-radius: $border-radius;
+      }
+   }
+   &__sort-btns-wrapper {
+      overflow-x: auto;
+      max-width: 100%;
+      padding: 20px 20px 20px 0;
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      align-items: center;
+      white-space: nowrap;
+      &::-webkit-scrollbar {
+         height: 7px;
+      }
+      &::-webkit-scrollbar-thumb {
+         background-color: $pink;
+         width: 50px;
+         border-radius: $border-radius;
+      }
+      .sort-btn {
+         position: relative;
+         @include button(
+            $padding: 10px 20px,
+            $border: 2px solid $pink,
+            $color: $pink,
+            $bradius: 60px,
+            $bgc: $white,
+            $bgc-hover: $pink,
+            $color-hover: white
+         );
+         &.active {
+            @include button(
+               $padding: 10px 20px,
+               $border: 2px solid $pink,
+               $color: white,
+               $bradius: 60px,
+               $bgc: $pink,
+               $bgc-hover: $pink,
+               $color-hover: white
+            );
+         }
+         &.active::after {
+            content: "↓";
+            position: absolute;
+            font-size: 18px;
+            top: 6px;
+            left: 7px;
+            color: white;
+         }
+         &.active.arrow-up::after {
+            content: "↑";
+         }
+      }
+   }
+}
+.categorys {
+   &__item {
+      @include button(
+         $padding: 10px 20px,
+         $border: 2px solid $pink,
+         $color: $pink,
+         $bradius: 60px,
+         $bgc: $white,
+         $bgc-hover: $pink,
+         $color-hover: white
+      );
+      &.active {
+         @include button(
+            $padding: 10px 20px,
+            $border: 2px solid $pink,
+            $color: white,
+            $bradius: 60px,
+            $bgc: $pink,
+            $bgc-hover: $pink,
+            $color-hover: white
+         );
+      }
+   }
+}

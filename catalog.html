@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>F-shop: Каталог</title>
+   <link rel="stylesheet" href="./css/styles.css">
+   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+   <header class="header">
+      <div class="header__wrapper wrapper">
+         <a href="#" class="header__logo logo">F-shop</a>
+
+         <nav class="header__navigation navigation">
+            <div class="navigation__icon">
+               <span></span>
+            </div>
+            <ul class="navigation__list">
+               <li><a href="./index.html" class="navigation__link">Главная</a></li>
+               <li><a href="./catalog.html" class="navigation__link">Каталог</a></li>
+               <li><a href="#contact" class="navigation__link">Контакты</a></li>
+            </ul>
+         </nav>
+         <div class="header__user user">
+            <div class="user__container">
+               <div>
+                  <label for="login">Имя пользователя</label>
+                  <input type="text" name="" id="login" class="input user__login" placeholder="Имя пользователя">
+               </div>
+               <div>
+                  <label for="password">Пароль</label>
+                  <input type="password" name="" id="password" class="input user__password" placeholder="Пароль">
+               </div>
+               <button class="user__loginBtn">Войти</button>
+            </div>
+         </div>
+      </div>
+   </header>
+   <section class="catalog">
+      <div class="catalog__wrapper wrapper">
+         <h2 class="catalog__title title">Каталог</h2>
+         <div class="catalog__categorys categorys"></div>
+         <div class="catalog__cards cards"></div>
+
+      </div>
+   </section>
+   <footer class="footer">
+      <a name="contact"></a>
+      <div class="footer__wrapper wrapper">
+         <div class="footer__item item">
+            <h2 class="item__title logo">F-shop</h2>
+            <script type="text/javascript" charset="utf-8" async
+               src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab5bc2fa187fa412db2941a23fb15a3192ce38fb3821a09a2d592feac871b8831&amp;width=220&amp;height=180&amp;lang=ru_RU&amp;scroll=true"></script>
+         </div>
+         <div class="footer__item item">
+            <h2 class="item__title">Полезные ссылки</h2>
+            <ul class="item__body">
+               <li><a href="#" title="Доставка">Доставка</a></li>
+               <li><a href="#" title="Оплата">Оплата</a></li>
+               <li><a href="#" title="Акции">Акции</a></li>
+               <li><a href="#" title="Политика конфиденциальности">Политика конфиденциальности</a></li>
+            </ul>
+         </div>
+         <div class="footer__item item">
+            <h2 class="item__title">контакты</h2>
+            <ul class="item__body">
+               <li>8 (812) 234-56-55</li>
+               <li>8 (812) 234-56-55</li>
+               <li>info@fastshop.com</li>
+               <li>Минск, улица Тимирязева, 67</li>
+            </ul>
+         </div>
+      </div>
+   </footer>
+   <a class="back_to_top" title="Наверх">↑</a>
+   <script type='module' src="./scripts/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+@mixin button(
+   $padding,
+   $color,
+   $bgc: inherit,
+   $border: 0px solid transparent,
+   $fsz: inherit,
+   $color-hover: inherit,
+   $bgc-hover: inherit,
+   $border-hover: $border,
+   $bradius: 0,
+   $fw: inherit
+) {
+   border-radius: $bradius;
+   padding: $padding;
+   color: $color;
+   background-color: $bgc;
+   border: $border;
+   font-size: $fsz;
+   cursor: pointer;
+   font-weight: inherit;
+   white-space: nowrap;
+   transition: color $transition-duration-btn, background-color $transition-duration-btn;
+   &:hover {
+      color: $color-hover;
+      background-color: $bgc-hover;
+      border: $border-hover;
+   }
+}

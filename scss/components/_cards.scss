@@ -1,0 +1,62 @@
+.cards {
+   display: flex;
+   gap: 30px;
+   // justify-content: center;
+   flex-wrap: wrap;
+   .item {
+      cursor: pointer;
+      flex-grow: 1;
+      position: relative;
+      border-radius: $border-radius;
+      box-shadow: 3px 3px 10px 1px grey;
+      flex-grow: 1;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      width: 300px;
+      overflow: hidden;
+      img {
+         width: 100%;
+         max-width: 200px;
+         height: 200px;
+         object-fit: contain;
+      }
+      &__name {
+         padding: 10px;
+         text-align: center;
+      }
+      :hover {
+         cursor: pointer;
+      }
+      .quick-view {
+         cursor: pointer;
+         color: $white;
+         opacity: 0;
+         font-weight: 500;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: absolute;
+         top: 40%;
+         padding: 15px 25px;
+         border-radius: 50px;
+         left: 50%;
+         border: none;
+         white-space: nowrap;
+         transform: translate(-50%, -50%);
+         background-color: $pink;
+         transition: opacity 0.3s;
+         box-shadow: 0 0 10px $pink;
+      }
+
+      &:hover .quick-view {
+         opacity: 0.8;
+      }
+      &:hover .quick-view:hover {
+         opacity: 1;
+      }
+   }
+}

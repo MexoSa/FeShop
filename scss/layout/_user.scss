@@ -1,0 +1,74 @@
+.user {
+   display: flex;
+   cursor: pointer;
+   width: 200px;
+   gap: 15px;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+   &__container {
+      position: relative;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      padding: 20px 20px 50px;
+      justify-content: space-between;
+      position: absolute;
+      top: -400px;
+      right: 20px;
+      background-color: $pink;
+      width: 300px;
+      height: 280px;
+      border-radius: $border-radius;
+      box-shadow: 5px 5px 15px 0px $grey;
+      transition: top 0.4s;
+      & div {
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         & label {
+            margin-left: 10px;
+         }
+      }
+      &.active {
+         top: 70px;
+      }
+      &.error .user__loginBtn:before {
+         position: absolute;
+         content: "Неверно введен Логин и(или) Пароль";
+         top: 55px;
+         left: 10px;
+         font-size: 0.7em;
+         color: white;
+      }
+   }
+   & .input {
+      padding: 10px 15px;
+      border-radius: $border-radius;
+   }
+   & .input:focus {
+      box-shadow: inset 0 0 5px 1px $green;
+   }
+   &__btn,
+   &__loginBtn {
+      position: relative;
+      @extend %main-btn;
+   }
+   &__loginBtn {
+      @extend %form-btn;
+      margin-top: 10px;
+   }
+   &__avatar {
+      border-radius: 50%;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .user {
+      justify-content: end;
+      flex: 1;
+      &__container {
+         right: -40px;
+      }
+   }
+}

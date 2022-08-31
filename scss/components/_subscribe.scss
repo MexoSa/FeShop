@@ -1,0 +1,82 @@
+.subscribe {
+   color: $white;
+   &__wrapper {
+      padding: 50px 20px;
+   }
+   &__title {
+      margin-bottom: 50px;
+      text-align: center;
+   }
+
+   &__body {
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 18px;
+      li {
+         padding-left: 10px;
+         list-style-image: url(../../img/list-icons.png);
+      }
+   }
+
+   &__form {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      gap: 20px;
+      border: 3px dotted $white;
+      padding: 20px;
+      border-radius: $border-radius;
+      input {
+         padding: 10px 15px;
+         border-radius: $border-radius;
+      }
+      &::before {
+         content: "";
+         position: absolute;
+         top: -35px;
+         right: -110px;
+         width: 70px;
+         height: 70px;
+         background-image: url(../../img//letter.svg);
+         background-repeat: no-repeat;
+         background-size: cover;
+         transform: rotate(40deg);
+      }
+   }
+
+   &__button {
+      @extend %form-btn;
+      font-weight: 700;
+      font-style: inherit;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   .subscribe {
+      &__form {
+         &::before {
+            display: none;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 650px) {
+   .subscribe {
+      &__body {
+         display: flex;
+         flex-direction: column;
+         gap: 50px;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+}

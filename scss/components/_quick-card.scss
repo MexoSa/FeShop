@@ -1,0 +1,54 @@
+.quick-card {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   width: 80vw;
+   position: absolute;
+   z-index: 101;
+   top: 0;
+   left: 50%;
+   box-shadow: 3px 3px 10px grey;
+   transform: translate(-50%);
+   background-color: $white;
+   padding: 50px;
+   border-radius: $border-radius;
+   &__title {
+      display: flex;
+      justify-content: space-between;
+   }
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+      img {
+         display: block;
+         width: 100%;
+         max-width: 400px;
+         min-width: 100px;
+         max-height: 400px;
+         object-fit: contain;
+      }
+   }
+   &__description {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      text-align: justify;
+   }
+   &__close-card {
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      background-color: inherit;
+   }
+}
+
+@media screen and (max-width: 600px) {
+   .quick-card {
+      padding: 20px;
+      &__body {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+}

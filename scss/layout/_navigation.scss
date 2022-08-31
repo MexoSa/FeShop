@@ -1,0 +1,102 @@
+.navigation {
+   &::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background-color: $pink;
+   }
+   &__list {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      gap: 50px;
+   }
+   &__link {
+      @extend %main-btn;
+   }
+   &__icon {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 768px) {
+   .navigation {
+      order: 5;
+      position: relative;
+
+      &__icon {
+         z-index: 10;
+         display: block;
+         position: relative;
+         width: 30px;
+         height: 18px;
+         margin: 0 15px;
+         cursor: pointer;
+         &::before,
+         &::after,
+         & span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            transition: all 0.4s;
+            background-color: $white;
+         }
+         &::before,
+         &::after {
+            content: "";
+         }
+
+         &::before {
+            top: 0;
+         }
+         &::after {
+            bottom: 0;
+         }
+         & span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+         }
+      }
+      &__list {
+         z-index: -5;
+         overflow: auto;
+         position: fixed;
+         flex-direction: column;
+         background-color: rgba(0, 0, 0, 0.9);
+         font-size: 28px;
+         top: 0;
+         left: -100%;
+         width: 100%;
+         height: 100%;
+         padding: 100px 30px 30px 30px;
+         transition: left 0.4s;
+      }
+      &.active &__list {
+         left: 0;
+      }
+      &.active &__icon span {
+         transform: scale(0);
+      }
+      &.active &__icon::after {
+         bottom: 50%;
+         transform: rotate(45deg) translate(0px, 50%);
+      }
+      &.active &__icon::before {
+         top: 50%;
+         transform: rotate(-45deg) translate(0px, -50%);
+      }
+      & li {
+         margin-bottom: 20px;
+      }
+      &__link {
+         color: $white;
+      }
+      &__link:hover {
+         text-decoration: underline;
+      }
+   }
+}

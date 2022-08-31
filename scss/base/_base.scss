@@ -1,0 +1,46 @@
+html {
+   scroll-behavior: smooth;
+}
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color: $pink;
+   font-family: "Open Sans", sans-serif;
+   &.lock {
+      overflow: hidden;
+   }
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+}
+
+input {
+   border: none;
+   outline: none;
+}
+
+.wrapper {
+   margin: 0 auto;
+   max-width: 1100px;
+}
+
+.title {
+   font-size: 30px;
+}
+
+.logo {
+   font-family: "Redressed", cursive;
+}
+
+.overlay {
+   width: 100%;
+   position: fixed;
+   height: 100%;
+   z-index: 100;
+   left: 0;
+   top: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+}

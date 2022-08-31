@@ -1,0 +1,14 @@
+%main-btn {
+   @include button($padding: 0, $color: $white, $color-hover: $white);
+}
+
+%form-btn {
+   @include button(
+      $padding: 10px 0,
+      $bradius: $border-radius,
+      $bgc: $white,
+      $color: $pink,
+      $bgc-hover: rgb(255, 138, 226),
+      $color-hover: white
+   );
+}
